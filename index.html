@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo 3D Responsive</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <!-- Model Viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="foreground"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="prova.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenuto principale -->
+    <div class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <h1 class="fw-bold">Benvenuto nella demo 3D</h1>
+          <p>Qui puoi esplorare il nostro fantastico modello 3D. Usa il mouse per ruotare, zoomare e ammirare i dettagli!</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <model-viewer 
+            src="Assets/sexy_flipper.glb"
+            alt="Modello 3D di un flipper"
+            
+            auto-rotate 
+            shadow-intensity="2"
+            ar 
+            ar-modes="webxr scene-viewer quick-look"
+            environment-image="neutral"
+            exposure="1"
+          ></model-viewer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <!-- Fix vh su mobile -->
+    <script>
+      function setVh() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh * 100}px`);
+      }
+      window.addEventListener('resize', setVh);
+      window.addEventListener('load', setVh);
+    </script>
+  </body>
+</html>

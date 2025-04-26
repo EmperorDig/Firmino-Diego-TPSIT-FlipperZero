@@ -1,0 +1,72 @@
+/* Viewport fix root */
+:root {
+    --vh: 100vh;
+  }
+  
+  /* Sfondo fisso arancione */
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff8e2b;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  /* Delfino in primo piano */
+  .foreground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--vh);
+    background: url('./Assets/dolphin.png') no-repeat left bottom;
+    background-size: min(30vw, 50vh);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Navbar custom */
+  .navbar-custom {
+    background-color: #0000002b;
+    color: white;
+    height: 5vh;
+    width: 50%;
+    margin: 1vh auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+  }
+  
+  .navbar-custom:hover {
+    background-color: #000000a0;
+    height: 10vh;
+    border-radius: 25px;
+  }
+  
+  /* Body fixes */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .foreground {
+      background-size: 40vw;
+    }
+  
+    model-viewer {
+      max-width: 300px !important;
+      margin-top: 1rem;
+    }
+  }
+  
