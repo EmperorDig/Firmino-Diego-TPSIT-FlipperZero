@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Features</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <!-- Model Viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- background -->
+    <div class="background-2"></div>
+    <div class="falling-dots"></div>
+    <div class="foreground-2"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom-2">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="Assets/logo.svg" alt="Logo" width="150" height="24" class="d-inline-block align-text-center"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://shop.flipperzero.one">Compra Ora</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenuto principale -->
+<div class="container my-5">
+  <!-- Immagine grande centralizzata -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-12 text-center">
+      <img src="Assets/details.jpg" alt="Immagine grande" class="img-fluid" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <!-- Griglia con sfondo unico -->
+  <div class="row justify-content-center" style="background-color: #00000010; padding: 20px; border-radius: 10px;">
+    <!-- Genera 18 celle (6 righe x 3 colonne) -->
+    <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon1.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>MCU (Microcontroller unit)</h5>
+            <p>Model: STM32WB55RG<br>
+                Application processor: ARM Cortex-M4 32-bit 64 MHz<br>
+                Radio processor: ARM Cortex-M0+ 32-bit 32 MHz<br>
+                Radio: Bluetooth LE 5.4, 802.15.4 and proprietary<br>
+                Flash: 1024 KB (shared between application and radio)<br>
+                SRAM: 256 KB (shared between application and radio)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon2.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Display</h5>
+            <p>LCD Monochrome<br>
+                Resolution: 128x64 px<br>
+                Controller: ST7567<br>
+                Interface: SPI<br>
+                Diagonal Size: 1.4“</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon3.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Battery</h5>
+            <p>LiPo 2100 mAh<br>
+                Up to 28 days battery life</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon4.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Sub-1 GHz module</h5>
+            <p>Transceiver: CC1101<br>
+                TX Power: -20 dBm max<br>
+                Frequency bands (depends on your region):<br>
+                ● 315 MHz<br>
+                ● 433 MHz<br>
+                ● 868 MHz<br>
+                ● 915 MHz</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon5.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Infrared</h5>
+            <p>RX wavelength: 950 nm (+/-100nm)<br>
+                RX carrier: 38 KHz (+/-5%)<br>
+                TX wavelength: 940 nm<br>
+                TX carrier: 0-2 MHz<br>
+                TX power: 300 mW<br>
+                Supported protocols:<br>
+                ● NEC family&emsp;● RC5, RC6<br>
+                ● Kaseikyo&emsp;&emsp;● Samsung<br>
+                ● RCA&emsp;&emsp;&emsp;&emsp;● SIRC</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon6.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>iButton 1-Wire</h5>
+            <p>Supported protocols:<br>
+                ● Dallas DS199x, DS1971<br>
+                ● CYFRAL<br>
+                ● Metakom<br>
+                ● TM2004<br>
+                ● RW1990</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon7.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>RFID 125 kHz</h5>
+            <p>Frequency: 125 kHz<br>
+                Modulation: AM/OOK<br>
+                Coding: AKS, PSK<br>
+                Supported cards:<br>
+                ● EM400x, EM410x, EM420x ● Jablotron<br>
+                ● HID ● Paradox<br>
+                ● Indala ● PACStanley<br>
+                ● FDX (A & B) ● Keri<br>
+                ● Pyramid ● Gallagher<br>
+                ● AWID ● Nexwatch<br>
+                ● Viking</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon8.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>NFC</h5>
+            <p>Transceiver: ST25R3916<br>
+                Frequency: 13.56 MHz<br>
+                Supported cards:<br>
+                ● ISO-14443A/B<br>
+                ● NXP MIFARE Classic®, Ultralight®, DESFire®, etc.<br>
+                ● FeliCa™<br>
+                ● HID iClass (PicoPass™)<br>
+                ● NFC Forum protocols</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon9.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>USB</h5>
+            <p>Type-C, USB 2.0 (12 Mbps)<br>
+                USB device<br>
+                Charging (1A max)</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon10.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>GPIO</h5>
+            <p>13 I/O pins available to user on external 2.54 mm connectors<br>
+                3.3V CMOS Level<br>
+                Input 5V tolerant (See AN4899)<br>
+                Up to 20 mA per digital pin</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon11.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Bluetooth LE 5.4</h5>
+            <p>TX power: 4 dBm max<br>
+                RX sensitivity: -96 dBm<br>
+                Data rate: 2 Mbps</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon12.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Vibration Motor</h5>
+            <p>Force value: 30 N<br>
+                Speed: 13500 rpm</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon13.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Micro SD</h5>
+            <p>Up to 256 GB microSD card (SPI mode)<br>
+                2-32 GB card recommended<br>
+                Read/Write speed: up to 5 Mbps<br>
+                Supported file systems: FAT12, FAT16, FAT32, and exFAT</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon14.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Buzzer</h5>
+            <p>Frequency: 100-2500 Hz<br>
+                Sound Output: 87 dB<br>
+                Type: Coin</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon15.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Control</h5>
+            <p>5-button directional pad<br>
+                Back button</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
+        <div class="d-flex align-items-start">
+          <img src="Assets/icon16.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <h5>Body</h5>
+            <p>Size: 100x40x25 mm (3.95x1.58x1.01 inches)<br>
+                Weight: 102 grams (3.6 ounces)<br>
+                Materials: PC, ABS, PMMA<br>
+                Operating temperature: 0° to 40° C (32° to 104° F)</p>
+          </div>
+        </div>
+      </div>
+    <!-- Ripeti per tutti gli altri elementi -->
+  </div>
+</div>
+<div class="container text-center my-4">
+  <a href="https://shop.flipperzero.one" class="btn btn-success btn-lg" role="button" target="_blank" rel="noopener noreferrer" style="position: relative; z-index: 10;">
+    <h1 style="font-size: 2rem;">Compra Ora</h1>
+  </a>
+</div>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script>
+      const modelViewer = document.querySelector('model-viewer');
+    
+      modelViewer.addEventListener('mouseenter', () => {
+        modelViewer.setAttribute('rotation-per-second', '10deg'); // Rallenta la rotazione
+      });
+    
+      modelViewer.addEventListener('mouseleave', () => {
+        modelViewer.setAttribute('rotation-per-second', '20deg'); // Ripristina la velocità originale
+      });
+    </script>
+    <!-- Fix vh su mobile -->
+    <script>
+      function setVh() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh * 100}px`);
+      }
+      window.addEventListener('resize', setVh);
+      window.addEventListener('load', setVh);
+    </script>
+
+    
+    <script>
+      const fallingDotsContainer = document.querySelector('.falling-dots');
+    
+      function createDot() {
+        const dot = document.createElement('div');
+        dot.classList.add('dot-2');
+    
+        // Posizione iniziale casuale
+        const startX = Math.random() * window.innerWidth;
+        const startY = 0; // Inizia fuori dallo schermo in alto
+    
+        // Imposta la posizione iniziale
+        dot.style.left = `${startX}px`;
+        dot.style.top = `${startY}px`;
+    
+        // Aggiungi il puntino al contenitore
+        fallingDotsContainer.appendChild(dot);
+    
+        // Rimuovi il puntino dopo l'animazione
+        setTimeout(() => {
+          dot.remove();
+        }, 5000); // Deve corrispondere alla durata dell'animazione (5s)
+      }
+    
+      // Genera un puntino ogni 500ms
+      setInterval(createDot, 500);
+    </script>
+  </body>
+</html>

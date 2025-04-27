@@ -14,6 +14,17 @@
     background-size: cover;
     z-index: -1;
   }
+
+  .background-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    background-size: cover;
+    z-index: -1;
+  }
   
   /* Delfino in primo piano */
   .foreground {
@@ -28,10 +39,21 @@
     pointer-events: none;
   }
   
+  .foreground-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--vh);
+    background: url('./Assets/dolphin.png') no-repeat left bottom;
+    background-size: min(10vw, 30vh);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
   /* Navbar custom */
   .navbar-custom {
     background-color: #ffdbc2a0;
-    color: white;
     width: 75%;
     margin: 1vh auto 0;
     display: flex;
@@ -40,6 +62,27 @@
     z-index: 1;
     border-radius: 15px;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
+  }
+  
+  .navbar-custom:hover {
+    background-color: #f3f3f3;
+    border-radius: 25px;
+  }
+
+  .navbar-custom-2 {
+    background-color: #ffffff;
+    width: 75%;
+    margin: 1vh auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+  }
+
+  .navbar-custom-2 .nav-link {
+    color: #ff8e2b; /* Colore desiderato per i link */
   }
   
   .navbar-custom:hover {
@@ -127,6 +170,15 @@
   border-radius: 50px; /* Arrotonda le punte */
   animation: fall 5s ease infinite; /* Animazione infinita */
 }
+
+    .dot-2 {
+      position: absolute;
+      width: 15px; /* Larghezza del parallelogramma */
+      height: 15px; /* Altezza del parallelogramma */
+      background-color: rgba(0, 0, 0, 0.15); /* Colore del parallelogramma */
+      border-radius: 50px; /* Arrotonda le punte */
+      animation: fall 5s ease infinite; /* Animazione infinita */
+    }
     
     @keyframes fall {
       0% {
