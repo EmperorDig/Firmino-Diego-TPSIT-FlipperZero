@@ -15,25 +15,28 @@
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <!-- background -->
     <div class="background"></div>
+    <div class="falling-dots"></div>
     <div class="foreground"></div>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="index.html"><img src="Assets/logo.svg" alt="Logo" width="150" height="24" class="d-inline-block align-text-center"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a> 
             </li>
             <li class="nav-item">
               <a class="nav-link" href="prova.html">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">Buy now</a>
             </li>
           </ul>
         </div>
@@ -42,30 +45,49 @@
 
     <!-- Contenuto principale -->
     <div class="container my-5">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-start">
-          <h1 class="fw-bold">Benvenuto nella demo 3D</h1>
-          <p>Qui puoi esplorare il nostro fantastico modello 3D. Usa il mouse per ruotare, zoomare e ammirare i dettagli!</p>
+      <div class="row align-items-top"
+           style="background-color: #ffdbc2a0;
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);">
+        <div class="col-md-6 d-flex flex-column text-center text-md-end justify-content-center custom-height-1 my-5">
+          <h1 class="fw-bold">Flipper Zero</h1>
+          <p>Flipper Zero is a portable multi-tool for pentesters and geeks in a toy-like body. It loves hacking digital stuff, such as radio protocols, access control systems, hardware, and more. It's fully open-source and customizable, so you can extend it in whatever way you like.</p>
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 text-center custom-height-2">
             <model-viewer 
             src="Assets/sexy_flipper.glb"
             alt="Modello 3D di un flipper"
-            
             auto-rotate 
             shadow-intensity="2"
             ar 
             ar-modes="webxr scene-viewer quick-look"
             environment-image="neutral"
             exposure="1"
-          ></model-viewer>
+            >
+          </model-viewer>
         </div>
       </div>
     </div>
+    <div class="container text-center my-4">
+  <a href="https://example.com/details" class="btn btn-primary btn-lg" role="button" target="_blank" rel="noopener noreferrer" style="position: relative; z-index: 10;">
+    <h1 style="font-size: 2rem;">Scopri di più</h1>
+  </a>
+</div>
 
     <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
+    <script>
+      const modelViewer = document.querySelector('model-viewer');
+    
+      modelViewer.addEventListener('mouseenter', () => {
+        modelViewer.setAttribute('rotation-per-second', '10deg'); // Rallenta la rotazione
+      });
+    
+      modelViewer.addEventListener('mouseleave', () => {
+        modelViewer.setAttribute('rotation-per-second', '20deg'); // Ripristina la velocità originale
+      });
+    </script>
     <!-- Fix vh su mobile -->
     <script>
       function setVh() {
@@ -74,6 +96,35 @@
       }
       window.addEventListener('resize', setVh);
       window.addEventListener('load', setVh);
+    </script>
+
+    
+    <script>
+      const fallingDotsContainer = document.querySelector('.falling-dots');
+    
+      function createDot() {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+    
+        // Posizione iniziale casuale
+        const startX = Math.random() * window.innerWidth;
+        const startY = 0; // Inizia fuori dallo schermo in alto
+    
+        // Imposta la posizione iniziale
+        dot.style.left = `${startX}px`;
+        dot.style.top = `${startY}px`;
+    
+        // Aggiungi il puntino al contenitore
+        fallingDotsContainer.appendChild(dot);
+    
+        // Rimuovi il puntino dopo l'animazione
+        setTimeout(() => {
+          dot.remove();
+        }, 5000); // Deve corrispondere alla durata dell'animazione (5s)
+      }
+    
+      // Genera un puntino ogni 500ms
+      setInterval(createDot, 500);
     </script>
   </body>
 </html>

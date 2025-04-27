@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ff8e2b;
+    background-image: url('./Assets/lcd.jpg');
     background-size: cover;
     z-index: -1;
   }
@@ -30,23 +30,30 @@
   
   /* Navbar custom */
   .navbar-custom {
-    background-color: #0000002b;
+    background-color: #ffdbc2a0;
     color: white;
-    height: 5vh;
-    width: 50%;
+    width: 75%;
     margin: 1vh auto 0;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
     border-radius: 15px;
-    transition: background-color 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
   }
   
   .navbar-custom:hover {
-    background-color: #000000a0;
-    height: 10vh;
+    background-color: #f3f3f3;
     border-radius: 25px;
+  }
+
+  .custom-height-1 {
+    height: auto; /* Altezza dinamica */
+    max-height: 200px;
+  }
+  
+  .custom-height-2 {
+    height: 500px; /* Altezza fissa */
   }
   
   /* Body fixes */
@@ -55,7 +62,6 @@
     padding: 0;
     height: 100%;
     overflow-x: hidden;
-    font-family: 'Segoe UI', sans-serif;
   }
   
   /* Responsive tweaks */
@@ -63,10 +69,82 @@
     .foreground {
       background-size: 40vw;
     }
-  
-    model-viewer {
-      max-width: 300px !important;
-      margin-top: 1rem;
+    .custom-height-1 {
+      height: auto; /* Altezza dinamica */
+      max-height: none;
+    }
+    .custom-height-2 {
+      height: 25vh; /* Altezza fissa per il modello 3D */
     }
   }
-  
+
+  model-viewer {
+      height: 100%;
+      max-height: 1200px !important;
+      width: 100%;
+      max-width: 1200px !important;
+      margin-top: 1rem;
+      transition: transform 0.3s ease; /* Aggiunge una transizione fluida */
+    }
+    
+    model-viewer:hover {
+      transform: scale(1.1); /* Leggero zoom */
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-family: 'Title', sans-serif; /* Usa il font personalizzato */
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-family: 'roboto', sans-serif;
+    }
+
+    @font-face {
+      font-family: 'Title'; /* Nome del font */
+      src: url('./Assets/LED\ Dot-Matrix.ttf') format('truetype'); /* Percorso del font */
+      font-weight: normal; /* Puoi specificare il peso (normal, bold, ecc.) */
+      font-style: normal; /* Puoi specificare lo stile (normal, italic, ecc.) */
+    }
+
+    .falling-dots {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Evita che interferiscano con i clic */
+      overflow: hidden;
+      z-index: -1; /* Dietro al contenuto */
+    }
+    
+    .dot {
+  position: absolute;
+  width: 15px; /* Larghezza del parallelogramma */
+  height: 15px; /* Altezza del parallelogramma */
+  background-color: rgba(0, 0, 0, 1); /* Colore del parallelogramma */
+  border-radius: 50px; /* Arrotonda le punte */
+  animation: fall 5s ease infinite; /* Animazione infinita */
+}
+    
+    @keyframes fall {
+      0% {
+        transform: translate(0, -50px); /* Inizia sopra lo schermo */
+        width: 15px; /* Larghezza del parallelogramma */
+        height: 0px; /* Altezza del parallelogramma */
+      }
+      40% {
+        width: 15px; /* Larghezza del parallelogramma */
+        height: 60px; /* Altezza del parallelogramma */
+      }
+      90% {
+        transform: translate(0, 100vh);
+        width: 15px; /* Larghezza del parallelogramma */
+        height: 0px; /* Altezza del parallelogramma */
+      }
+      100% {
+        width: 15px; /* Larghezza del parallelogramma */
+        height: 0px; /* Altezza del parallelogramma */
+      }
+    }
