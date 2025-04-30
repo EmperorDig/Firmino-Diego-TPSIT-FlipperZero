@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Features</title>
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     
-    <!-- Model Viewer -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-    <!-- CSS -->
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -43,7 +40,7 @@
       </div>
     </nav>
 
-    <!-- Contenuto principale -->
+    <!-- pagina -->
 <div class="container my-5">
   <!-- Immagine grande centralizzata -->
   <div class="row justify-content-center mb-5">
@@ -52,9 +49,8 @@
     </div>
   </div>
 
-  <!-- Griglia con sfondo unico -->
   <div class="row justify-content-center" style="background-color: #00000010; padding: 20px; border-radius: 10px;">
-    <!-- Genera 18 celle (6 righe x 3 colonne) -->
+    <!-- 6 x 3 -->
     <div class="col-lg-4 col-md-6 col-12 mb-4 text-start">
         <div class="d-flex align-items-start">
           <img src="Assets/icon1.webp" alt="Icona" style="width: 50px; height: 50px; margin-right: 10px;">
@@ -277,7 +273,6 @@
           </div>
         </div>
       </div>
-    <!-- Ripeti per tutti gli altri elementi -->
   </div>
 </div>
 <div class="container text-center my-4">
@@ -286,21 +281,20 @@
   </a>
 </div>
 
-    <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
     <script>
       const modelViewer = document.querySelector('model-viewer');
     
       modelViewer.addEventListener('mouseenter', () => {
-        modelViewer.setAttribute('rotation-per-second', '10deg'); // Rallenta la rotazione
+        modelViewer.setAttribute('rotation-per-second', '10deg');
       });
     
       modelViewer.addEventListener('mouseleave', () => {
-        modelViewer.setAttribute('rotation-per-second', '20deg'); // Ripristina la velocità originale
+        modelViewer.setAttribute('rotation-per-second', '20deg');
       });
     </script>
-    <!-- Fix vh su mobile -->
+
     <script>
       function setVh() {
         let vh = window.innerHeight * 0.01;
@@ -318,24 +312,19 @@
         const dot = document.createElement('div');
         dot.classList.add('dot-2');
     
-        // Posizione iniziale casuale
         const startX = Math.random() * window.innerWidth;
-        const startY = 0; // Inizia fuori dallo schermo in alto
+        const startY = 0;
     
-        // Imposta la posizione iniziale
         dot.style.left = `${startX}px`;
         dot.style.top = `${startY}px`;
     
-        // Aggiungi il puntino al contenitore
         fallingDotsContainer.appendChild(dot);
     
-        // Rimuovi il puntino dopo l'animazione
         setTimeout(() => {
           dot.remove();
-        }, 5000); // Deve corrispondere alla durata dell'animazione (5s)
+        }, 5000);
       }
     
-      // Genera un puntino ogni 500ms
       setInterval(createDot, 500);
     </script>
   </body>

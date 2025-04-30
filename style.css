@@ -1,9 +1,7 @@
-/* Viewport fix root */
 :root {
     --vh: 100vh;
   }
-  
-  /* Sfondo fisso arancione */
+
   .background {
     position: fixed;
     top: 0;
@@ -26,7 +24,6 @@
     z-index: -1;
   }
   
-  /* Delfino in primo piano */
   .foreground {
     position: fixed;
     top: 0;
@@ -51,7 +48,6 @@
     pointer-events: none;
   }
   
-  /* Navbar custom */
   .navbar-custom {
     background-color: #ffdbc2a0;
     width: 75%;
@@ -82,7 +78,7 @@
   }
 
   .navbar-custom-2 .nav-link {
-    color: #ff8e2b; /* Colore desiderato per i link */
+    color: #ff8e2b;
   }
   
   .navbar-custom:hover {
@@ -91,15 +87,14 @@
   }
 
   .custom-height-1 {
-    height: auto; /* Altezza dinamica */
+    height: auto;
     max-height: 200px;
   }
   
   .custom-height-2 {
-    height: 500px; /* Altezza fissa */
+    height: 500px;
   }
   
-  /* Body fixes */
   html, body {
     margin: 0;
     padding: 0;
@@ -107,17 +102,16 @@
     overflow-x: hidden;
   }
   
-  /* Responsive tweaks */
   @media (max-width: 768px) {
     .foreground {
       background-size: 40vw;
     }
     .custom-height-1 {
-      height: auto; /* Altezza dinamica */
+      height: auto;
       max-height: none;
     }
     .custom-height-2 {
-      height: 25vh; /* Altezza fissa per il modello 3D */
+      height: 25vh;
     }
   }
 
@@ -127,16 +121,16 @@
       width: 100%;
       max-width: 1200px !important;
       margin-top: 1rem;
-      transition: transform 0.3s ease; /* Aggiunge una transizione fluida */
+      transition: transform 0.3s ease;
     }
     
     model-viewer:hover {
-      transform: scale(1.1); /* Leggero zoom */
+      transform: scale(1.1);
     }
 
     h1 {
       font-size: 4.5rem;
-      font-family: 'Title', sans-serif; /* Usa il font personalizzato */
+      font-family: 'Title', sans-serif;
     }
 
     p {
@@ -145,10 +139,10 @@
     }
 
     @font-face {
-      font-family: 'Title'; /* Nome del font */
-      src: url('./Assets/LED\ Dot-Matrix.ttf') format('truetype'); /* Percorso del font */
-      font-weight: normal; /* Puoi specificare il peso (normal, bold, ecc.) */
-      font-style: normal; /* Puoi specificare lo stile (normal, italic, ecc.) */
+      font-family: 'Title';
+      src: url('./Assets/LED\ Dot-Matrix.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
     }
 
     .falling-dots {
@@ -157,46 +151,46 @@
       left: 0;
       width: 100%;
       height: 100%;
-      pointer-events: none; /* Evita che interferiscano con i clic */
+      pointer-events: none;
       overflow: hidden;
-      z-index: -1; /* Dietro al contenuto */
+      z-index: -1;
     }
     
     .dot {
   position: absolute;
-  width: 15px; /* Larghezza del parallelogramma */
-  height: 15px; /* Altezza del parallelogramma */
-  background-color: rgba(0, 0, 0, 1); /* Colore del parallelogramma */
-  border-radius: 50px; /* Arrotonda le punte */
-  animation: fall 5s ease infinite; /* Animazione infinita */
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50px;
+  animation: fall 5s ease infinite;
 }
 
     .dot-2 {
       position: absolute;
-      width: 15px; /* Larghezza del parallelogramma */
-      height: 15px; /* Altezza del parallelogramma */
-      background-color: rgba(0, 0, 0, 0.15); /* Colore del parallelogramma */
-      border-radius: 50px; /* Arrotonda le punte */
-      animation: fall 5s ease infinite; /* Animazione infinita */
+      width: 15px;
+      height: 15px;
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 50px;
+      animation: fall 5s ease infinite;
     }
     
     @keyframes fall {
       0% {
-        transform: translate(0, -50px); /* Inizia sopra lo schermo */
-        width: 15px; /* Larghezza del parallelogramma */
-        height: 0px; /* Altezza del parallelogramma */
+        transform: translate(0, -50px);
+        width: 15px;
+        height: 0px;
       }
       40% {
-        width: 15px; /* Larghezza del parallelogramma */
-        height: 60px; /* Altezza del parallelogramma */
+        width: 15px;
+        height: 60px;
       }
       90% {
         transform: translate(0, 100vh);
-        width: 15px; /* Larghezza del parallelogramma */
-        height: 0px; /* Altezza del parallelogramma */
+        width: 15px;
+        height: 0px;
       }
       100% {
-        width: 15px; /* Larghezza del parallelogramma */
-        height: 0px; /* Altezza del parallelogramma */
+        width: 15px;
+        height: 0px;
       }
     }
